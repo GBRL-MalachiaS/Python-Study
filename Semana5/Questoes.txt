@@ -1,0 +1,299 @@
+Claro! A **Semana 5** envolve **Programação Orientada a Objetos (POO)**, um conceito fundamental para estruturar e organizar seu código de maneira eficiente e reutilizável. Abaixo estão exercícios práticos que cobrem conceitos como **classes**, **objetos**, **métodos**, **atributos**, **herança**, e **polimorfismo**.
+
+### Semana 5: Programação Orientada a Objetos (POO)
+
+#### 1. Classes e Objetos
+
+1. **Exercício 1:** Crie uma classe chamada `Pessoa` que tenha os seguintes atributos:
+   - `nome`, `idade` e `email`.
+   - Crie um método chamado `apresentar()` que exiba uma mensagem com o nome, a idade e o e-mail da pessoa.
+   - Crie dois objetos dessa classe e utilize o método `apresentar()` para exibir as informações de cada pessoa.
+
+   class Pessoa:
+
+    def __init__(self, nome, idade, email):
+        self.nome = nome
+        self.idade = idade
+        self.email = email
+
+    def apresentar(self):
+        print(f"Nome: {self.nome}\nIdade: {self.idade}\nE-mail: {self.email}")
+
+
+pessoa1 = Pessoa("Gabriel", 29, "gbl.malachias@gmail.com")
+pessoa2 = Pessoa("Ariane", 24, "Arika_123@hotmail.com")
+
+pessoa1.apresentar()
+pessoa2.apresentar()
+
+
+2. **Exercício 2:** Crie uma classe chamada `Retangulo` que tenha os atributos `largura` e `altura`. A classe deve ter dois métodos:
+   - `calcular_area()` que retorna a área do retângulo (largura x altura).
+   - `calcular_perimetro()` que retorna o perímetro do retângulo (2 * (largura + altura)).
+   - Crie dois objetos da classe e exiba a área e o perímetro para ambos.
+
+class Retangulo:
+
+    def __init__(self, largura: float, altura: float) -> None:
+        self.largura = largura
+        self.altura = altura
+
+    def calcular_area(self) -> float:
+        return self.largura * self.altura
+
+    def calcular_perimetro(self) -> float:
+        return (2*(self.largura + self.altura))
+
+
+um = Retangulo(15.5, 21.2)
+dois = Retangulo(2.5, 6.5)
+
+print(um.calcular_area())
+print(dois.calcular_area())
+print(um.calcular_perimetro())
+print(dois.calcular_perimetro())
+
+
+3. **Exercício 3:** Crie uma classe chamada `ContaBancaria` com os seguintes atributos:
+   - `titular`, `saldo`.
+   - Métodos:
+     - `depositar(valor)`: Adiciona o valor ao saldo.
+     - `sacar(valor)`: Subtrai o valor do saldo, se houver saldo suficiente.
+     - `exibir_saldo()`: Exibe o saldo atual.
+   - Crie um objeto dessa classe e faça depósitos, saques e exiba o saldo em diferentes momentos.
+
+   class ContaBancaria:
+    def __init__(self, titular: str, saldo: float) -> None:
+        self.titualar = titular
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+        return self.saldo
+
+    def sacar(self, valor):
+        self.saldo -= valor
+        return self.saldo
+
+    def exibir_saldo(self):
+        return self.saldo
+
+
+titular1 = ContaBancaria("Gabriel Malachias", 55)
+titular2 = ContaBancaria("Luciana Goncalves", 89)
+
+print(f"Deposito realizado no valor de: R${titular1.depositar(69)}")
+print(f"Saque realizado no valor de: R${titular1.sacar(38)}")
+print(f"Seu saldo é de: R${titular1.exibir_saldo()}")
+
+print(f"Deposito realizado no valor de: R${titular2.depositar(69)}")
+print(f"Saque realizado no valor de: R${titular2.sacar(38)}")
+print(f"Seu saldo é de: R${titular2.exibir_saldo()}")
+
+#### 2. Métodos e Construtores
+
+4. **Exercício 4:** Crie uma classe chamada `Carro` com os atributos `marca`, `modelo` e `ano`. A classe deve ter um método construtor (`__init__`) que inicialize esses atributos automaticamente quando um objeto da classe for criado. Além disso, crie um método chamado `exibir_informacoes()` que exiba as informações do carro.
+   - Crie dois objetos dessa classe e exiba as informações de cada carro.
+
+   class Carro:
+
+    def __init__(self, marca: str, modelo: str, ano: int) -> None:
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+
+    def exibir_informacoes(self) -> None:
+
+        print(f'Marca: {self.marca}\nModelo: {self.modelo}\nAno: {self.ano}')
+
+
+carroca1 = Carro("Chevrolet", "Corsa", 2006)
+carroca1.exibir_informacoes()
+carroca2 = Carro("Fiat", "Argo", 2019)
+carroca2.exibir_informacoes()
+
+
+5. **Exercício 5:** Crie uma classe chamada `Livro` que tenha os seguintes atributos:
+   - `titulo`, `autor`, `paginas`.
+   - Crie um método construtor que inicialize esses atributos.
+   - Crie um método chamado `detalhes()` que exiba as informações do livro.
+   - Crie três objetos dessa classe e exiba os detalhes de cada livro.
+
+   class Livros:
+    def __init__(self, titulo: str, autor: str, paginas: int) -> None:
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+
+    def detalhes(self) -> str:
+        print(f'O livro {self.titulo} do autor {
+              self.autor} possui {self.paginas} paginas')
+
+
+livro1 = Livros("Memoria Postunas", "Bras Cubas", 256)
+livro2 = Livros("Guerras dos Tronos", "RR Martin", 780)
+livro3 = Livros("Mentiram Muito para mim", "Flavio Quintilha", 210)
+
+livro1.detalhes()
+livro2.detalhes()
+livro3.detalhes()
+
+
+#### 3. Herança
+
+6. **Exercício 6:** Crie uma classe chamada `Animal` com um método `emitir_som()`, que exibe uma mensagem genérica como "O animal está emitindo um som". Depois, crie duas subclasses:
+   - `Cachorro`: Deve sobrescrever o método `emitir_som()` para exibir "O cachorro está latindo".
+   - `Gato`: Deve sobrescrever o método `emitir_som()` para exibir "O gato está miando".
+   - Crie objetos das subclasses e chame o método `emitir_som()` para cada um.
+
+   class Animal:
+    def __init__(self, nome: str) -> None:
+        self.nome = nome
+
+    def emitir_som(self):
+        print(f'{self.nome} um animal qualquer está emitindo o som')
+
+
+class Gato(Animal):
+    def emitir_som(self):
+        print(f'O gato {self.nome} está miando')
+
+
+class Cachorro(Animal):
+    def emitir_som(self):
+        print(f'O Cachorro {self.nome} está latindo')
+
+
+dog = Cachorro("Rex")
+cat = Gato("Gatuno")
+
+dog.emitir_som()
+cat.emitir_som()
+
+
+7. **Exercício 7:** Crie uma classe chamada `Funcionario` que tenha os atributos `nome` e `salario`. Em seguida, crie uma subclasse chamada `Gerente`, que herda de `Funcionario` e tenha um atributo adicional chamado `departamento`. O `Gerente` deve ter um método chamado `exibir_detalhes()` que exiba todas as informações (nome, salário e departamento).
+   - Crie um objeto da classe `Gerente` e exiba os detalhes.
+
+   
+class Funcionario:
+    def __init__(self, nome: str, salario: float) -> None:
+        self.nome = nome
+        self.salario = salario
+
+
+class Gerente(Funcionario):
+    def __init__(self, nome: str, salario: float, departamento: str) -> None:
+        # Chama o construtor da superclasse (Funcionario)
+        super().__init__(nome, salario)
+        # Atributo específico da classe Gerente
+        self.departamento = departamento
+
+    def exibir_detalhes(self) -> None:
+        print(f'Colaborador: {self.nome}\nDepartamento: {
+              self.departamento}\nSalário: R${self.salario:.2f}')
+
+
+# Criando um objeto da classe Gerente
+colab = Gerente("Gabriel", 1225.65, "Comercial")
+colab.exibir_detalhes()
+
+
+#### 4. Encapsulamento
+
+8. **Exercício 8:** Crie uma classe chamada `ContaCorrente` com os atributos `titular` e `saldo` (saldo deve ser privado). Crie os métodos:
+   - `depositar(valor)`: Adiciona o valor ao saldo.
+   - `sacar(valor)`: Subtrai o valor do saldo, se houver saldo suficiente.
+   - `get_saldo()`: Retorna o saldo.
+   - **Dica:** Use `self.__saldo` para criar um atributo privado.
+   - Crie um objeto dessa classe, faça depósitos, saques e use `get_saldo()` para exibir o saldo.
+
+   class ContaCorrente():
+    def __init__(self, titular: str, saldo: float) -> None:
+        self.titular = titular
+        self.__saldo = saldo
+
+    def depositar(self, valor: float) -> None:
+        if valor > 0:
+            self.__saldo += valor
+        else:
+            print(f'O valor R${valor}digitado é invalido')
+
+    def sacar(self, valor: float) -> None:
+        if self.__saldo < valor:
+            print(f"Saldo insulficiente ! Você possui somente {self.__saldo}")
+        else:
+            self.__saldo -= valor
+
+    def get_saldo(self):
+        print(f'Saldo atual de R${self.__saldo}')
+
+
+cliente = ContaCorrente("Gabriel", 32500.80)
+
+cliente.depositar(95)
+cliente.get_saldo()
+cliente.sacar(35)
+cliente.get_saldo()
+
+
+9. **Exercício 9:** Crie uma classe chamada `Aluno` com os atributos `nome` e `nota` (nota deve ser privada). A classe deve ter os métodos:
+   - `set_nota(nova_nota)`: Altera a nota do aluno (use validação para garantir que a nota está entre 0 e 10).
+   - `get_nota()`: Retorna a nota atual.
+   - `exibir_detalhes()`: Exibe o nome e a nota do aluno.
+   - Crie um objeto da classe e teste os métodos.
+class Aluno:
+
+    def __init__(self, nome: str, nota: float) -> None:
+        self.nome = nome
+        self.__nota = nota
+
+    @property
+    def nota(self):
+        return self.__nota
+
+    @nota.setter
+    def nota(self, novanota: float) -> float:
+
+        try:
+            novanota = float(novanota)
+            if novanota >= 0 and novanota <= 10:
+                self.__nota = novanota
+            else:
+                print("Nota invalida")
+
+        except ValueError:
+            print("O valor digitado é invalido! Digite uma nota valida!")
+
+    def exibir_detalhes(self):
+        print(f'O aluno: {self.nome}, nota atual: {self.__nota}')
+
+
+aluno1 = Aluno("Gabriel Malachias", 5.5)
+aluno1.exibir_detalhes()
+aluno1.nota = 8.5
+aluno1.exibir_detalhes()
+
+#### 5. Polimorfismo
+
+10. **Exercício 10:** Crie uma classe chamada `FormaGeometrica` com um método `calcular_area()`, que exibe uma mensagem dizendo que a área será calculada. Depois, crie duas subclasses:
+    - `Circulo`: Deve sobrescrever o método `calcular_area()` para calcular a área de um círculo (use π * raio²).
+    - `Quadrado`: Deve sobrescrever o método `calcular_area()` para calcular a área de um quadrado (use lado²).
+    - Crie objetos de ambas as classes e chame o método `calcular_area()`.
+
+---
+
+### Desafio
+
+**Desafio:** Crie um sistema de gerenciamento de biblioteca com as seguintes classes:
+- **Livro**: Contém título, autor e status (disponível ou emprestado).
+- **Usuario**: Contém nome e uma lista de livros emprestados.
+- **Biblioteca**: Gerencia os livros e os usuários. Deve permitir:
+  - Adicionar livros.
+  - Emprestar livros para usuários.
+  - Devolver livros.
+  - Exibir todos os livros e seus status.
+  - Exibir os usuários e os livros que eles emprestaram.
+
+---
+
+Esses exercícios cobrem os principais conceitos de **Programação Orientada a Objetos (POO)**, como **classes**, **objetos**, **herança**, **encapsulamento**, e **polimorfismo**. Quando você resolver esses exercícios, podemos revisá-los juntos!
