@@ -28,3 +28,24 @@
 18. Demonstre o comportamento de variável global vs local em funções.
 19. Crie um contador usando função com parâmetro padrão.
 20. Escreva uma função que recebe outra função como parâmetro (função de ordem superior).
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 2**
+
+### 🔁 **Gerenciador de Tarefas no Terminal**
+
+Criar um programa que:
+
+1. Exiba um **menu contínuo** usando `while` com opções:
+
+   * Adicionar tarefa
+   * Listar tarefas
+   * Remover tarefa
+   * Contar tarefas
+   * Sair
+2. Armazene as tarefas em uma lista.
+3. Use funções para cada ação.
+4. Trate entradas inválidas com `try/except`.
+5. Use `if/elif/else` corretamente.
+6. Implemente um contador recursivo de tarefas (opcional extra).
+
+Esse projeto combina loops, funções, condicionais e recursão.

@@ -30,3 +30,25 @@
 20. Identifique e corrija erros comuns de manipulação de arquivos.
 
 ---
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 4**
+
+### 📝 **Editor de Arquivos + Analisador de Texto**
+
+Desenvolver um programa que:
+
+1. Peça o nome de um arquivo.
+2. Permita usar um menu com opções:
+
+   * Criar arquivo
+   * Escrever texto
+   * Ler arquivo
+   * Contar linhas
+   * Contar palavras
+   * Procurar palavra no arquivo
+   * Gerar relatório completo
+3. Use métodos de strings: `split()`, `join()`, `replace()`, etc.
+4. Trabalhe com leitura e escrita (`r`, `w`, `a`).
+5. Utilize `try/except` para erros comuns (arquivo inexistente).
+
+Fortalece manipulação de texto e arquivos.

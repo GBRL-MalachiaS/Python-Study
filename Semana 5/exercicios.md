@@ -28,3 +28,23 @@
 18. Simule um sistema de pedidos com classes Produto e Pedido.
 19. Implemente um método mágico `__str__`.
 20. Implemente um sistema de cadastro usando POO completo.
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 5**
+
+### 🧱 **Sistema de Banco OO**
+
+Crie um sistema orientado a objetos com:
+
+1. Classe **Cliente** (nome, cpf).
+2. Classe **Conta** (agência, número, saldo).
+3. Métodos:
+
+   * depositar
+   * sacar
+   * extrato
+4. Use encapsulamento (atributos privados).
+5. Crie uma classe derivada **ContaEspecial** com limite extra.
+6. Use polimorfismo em operações.
+7. Gere um menu no terminal para operações.
+
+Esse desafio solidifica POO completo.

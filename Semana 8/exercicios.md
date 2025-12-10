@@ -28,3 +28,21 @@
 18. Implemente um decorador que converte exceções em logs.
 19. Monte um projeto completo (calculadora, jogo ou scraper).
 20. Refatore o projeto aplicando boas práticas.
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 8**
+
+### 🚀 **Projeto Final: App Completo com Decoradores, Geradores e Async**
+
+Crie um app no terminal que:
+
+1. Carrega dados grandes usando **geradores**.
+2. Usa **decoradores** para:
+
+   * logs
+   * medir tempo
+   * validar entrada
+3. Possui tarefas assíncronas com `async/await`.
+4. Processa dados enquanto faz requisições assíncronas.
+5. Gera um relatório final.
+
+Um mega desafio que integra tudo.

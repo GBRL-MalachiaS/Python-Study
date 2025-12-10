@@ -28,3 +28,22 @@
 18. Manipule matrizes grandes no NumPy.
 19. Faça análise básica de dados reais.
 20. Gere gráficos combinados com Matplotlib.
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 7**
+
+### 📊 **Dashboard Analítico + API**
+
+Crie um mini sistema que:
+
+1. Use **Requests** para pegar dados de uma API pública.
+2. Carregue os dados em um **DataFrame (Pandas)**.
+3. Gere gráficos usando **Matplotlib** (barras, linha, pizza).
+4. Faça análises:
+
+   * Média
+   * Máximo
+   * Mínimo
+   * Correlações
+5. Salve os gráficos como imagens.
+
+É um projeto completo de análise de dados.

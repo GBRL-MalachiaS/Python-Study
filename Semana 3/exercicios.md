@@ -28,3 +28,25 @@
 18. Implemente operações de conjunto: diferença, interseção, união.
 19. Crie um sistema simples de cadastro usando lista de dicionários.
 20. Crie uma tupla contendo listas dentro e modifique os valores internos.
+
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 3**
+
+### 📦 **Sistema de Cadastro (CRUD) usando Listas e Dicionários**
+
+Crie um sistema que permita:
+
+1. **Cadastrar pessoas** com os campos:
+
+   * nome
+   * idade
+   * cidade
+     (armazenados em **lista de dicionários**)
+2. **Listar** todos os cadastros com formatação.
+3. **Buscar** um cadastro pelo nome.
+4. **Alterar** dados de um cadastro.
+5. **Excluir** um cadastro.
+6. Usar **conjuntos (sets)** para rastrear cidades únicas.
+7. Validar entradas (idade deve ser número).
+
+Exige domínio de listas, tuplas, dicionários e sets.

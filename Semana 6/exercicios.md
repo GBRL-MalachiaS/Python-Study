@@ -28,3 +28,33 @@
 18. Implemente logging dentro de um módulo.
 19. Crie constantes globais em um módulo.
 20. Crie um pacote de utilidades para um projeto maior.
+
+# 🔥 **DESAFIO COMPLEXO – SEMANA 6**
+
+### 📦 **Pacote de Utilidades Python**
+
+Crie um pacote estruturado assim:
+
+```
+meu_pacote/
+    __init__.py
+    matematica/
+        __init__.py
+        operacoes.py
+    texto/
+        __init__.py
+        funcoes.py
+    sistema/
+        __init__.py
+        log.py
+```
+
+egras:
+
+1. `matematica.operacoes` deve ter funções matemáticas.
+2. `texto.funcoes` deve manipular strings.
+3. `sistema.log` deve registrar logs em arquivo.
+4. Crie um programa principal que usa esse pacote.
+5. Inclua docstrings.
+
+Potencializa o domínio sobre módulos e pacotes.
