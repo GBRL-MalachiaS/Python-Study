@@ -60,8 +60,8 @@ class ContaCorrente(Conta):
             self.saldo = 0
             self.limite_credito -= valor_excedente
             print(f'Saque realizado utilizando limite de crédito.')
-            print(f'Saldo atual: R${
-                  self.saldo:.2f} - Limite de Crédito: R${self.limite_credito:.2f}')
+            print(
+                f'Saldo atual: R${self.saldo:.2f} - Limite de Crédito: R${self.limite_credito:.2f}')
 
 
 class ContaPoupanca(Conta):
