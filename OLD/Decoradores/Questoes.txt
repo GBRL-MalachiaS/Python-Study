@@ -1,0 +1,323 @@
+Claro! Aqui estão alguns exercícios práticos para treinar e consolidar seu entendimento sobre decoradores em Python. Esses exercícios cobrem desde o básico até aplicações mais avançadas, explorando diferentes aspectos e casos de uso dos decoradores.
+
+---
+
+### Exercício 1: Decorador de Logging
+
+Crie um decorador chamado `log_execucao` que registre a data e hora de execução de uma função. Esse decorador deve exibir uma mensagem `"Executando função <nome_da_funcao> em <data_hora>"` antes de chamar a função.
+
+#### Exemplo:
+```python
+@log_execucao
+def saudacao(nome):
+    print(f"Olá, {nome}!")
+
+saudacao("Alice")
+```
+
+#### Saída esperada:
+```
+Executando função saudacao em YYYY-MM-DD HH:MM:SS
+Olá, Alice!
+```
+
+---
+
+### Exercício 2: Decorador de Validação de Argumentos
+
+Crie um decorador chamado `valida_positivo` que garanta que todos os argumentos passados para uma função sejam números positivos. Caso algum argumento não seja positivo, a função não deve ser executada e o decorador deve exibir uma mensagem de erro.
+
+#### Exemplo:
+```python
+@valida_positivo
+def soma(a, b):
+    return a + b
+
+print(soma(3, 5))  # 8
+print(soma(3, -1))  # "Erro: Valores negativos não são permitidos!"
+```
+
+---
+
+### Exercício 3: Temporizador de Execução
+
+Crie um decorador chamado `temporizador` que meça o tempo de execução de uma função e exiba o tempo total em segundos após a execução.
+
+#### Exemplo:
+```python
+@temporizador
+def espera():
+    from time import sleep
+    sleep(2)
+
+espera()
+```
+
+#### Saída esperada:
+```
+Tempo de execução: 2.0 segundos
+```
+
+---
+
+### Exercício 4: Decorador de Contagem de Execuções
+
+Crie um decorador chamado `contador_execucoes` que conte quantas vezes uma função foi executada e exiba essa contagem após cada execução.
+
+#### Exemplo:
+```python
+@contador_execucoes
+def dizer_ola():
+    print("Olá!")
+
+dizer_ola()
+dizer_ola()
+```
+
+#### Saída esperada:
+```
+Olá!
+Função foi executada 1 vez(es)
+Olá!
+Função foi executada 2 vez(es)
+```
+
+---
+
+### Exercício 5: Decorador de Cache de Resultados
+
+Crie um decorador chamado `cache_resultados` que armazene os resultados das chamadas de uma função com base nos argumentos recebidos. Se a função for chamada novamente com os mesmos argumentos, o decorador deve retornar o resultado armazenado, evitando a execução repetida.
+
+#### Exemplo:
+```python
+@cache_resultados
+def calcula_soma(a, b):
+    print("Calculando...")
+    return a + b
+
+print(calcula_soma(3, 5))  # Calculando...
+print(calcula_soma(3, 5))  # Retorna o resultado armazenado sem calcular novamente
+```
+
+---
+
+### Exercício 6: Decorador de Autenticação
+
+Crie um decorador chamado `autenticar_usuario` que receba como parâmetro um usuário e senha corretos. O decorador deve verificar se as credenciais fornecidas ao chamar a função estão corretas. Se estiverem, a função é executada; caso contrário, exibe uma mensagem de "Acesso negado".
+
+#### Exemplo:
+```python
+@autenticar_usuario(usuario="admin", senha="1234")
+def acesso_restrito():
+    print("Bem-vindo à área restrita!")
+
+acesso_restrito("admin", "1234")  # Bem-vindo à área restrita!
+acesso_restrito("user", "senha_errada")  # Acesso negado
+```
+
+---
+
+### Exercício 7: Decorador para Repetir Execução
+
+Crie um decorador chamado `repetir` que receba um número como parâmetro e repita a execução de uma função esse número de vezes.
+
+#### Exemplo:
+```python
+@repetir(3)
+def diga_bom_dia():
+    print("Bom dia!")
+
+diga_bom_dia()
+```
+
+#### Saída esperada:
+```
+Bom dia!
+Bom dia!
+Bom dia!
+```
+
+---
+
+### Exercício 8: Decorador para Conversão de Resultado
+
+Crie um decorador chamado `converter_resultado` que converta o valor retornado por uma função para um tipo específico, como `str`, `int` ou `float`. O tipo de conversão deve ser especificado como parâmetro do decorador.
+
+#### Exemplo:
+```python
+@converter_resultado(str)
+def soma(a, b):
+    return a + b
+
+print(soma(10, 5))  # Retorna '15' como string
+```
+
+---
+
+### Exercício 9: Decorador de Verificação de Tipo de Argumento
+
+Crie um decorador chamado `verificar_tipo` que receba o tipo esperado dos argumentos e verifique se todos os argumentos passados para uma função estão corretos. Se algum argumento tiver um tipo incorreto, o decorador deve exibir uma mensagem de erro.
+
+#### Exemplo:
+```python
+@verificar_tipo(int, int)
+def soma(a, b):
+    return a + b
+
+print(soma(3, 5))  # Executa normalmente
+print(soma(3, "5"))  # "Erro: Argumento com tipo incorreto"
+```
+
+---
+
+### Exercício 10: Decorador para Logging com Níveis
+
+Crie um decorador chamado `log_nivel` que receba um nível de log (`INFO`, `WARNING`, `ERROR`) e exiba uma mensagem de log antes de chamar a função. O nível deve ser especificado como parâmetro do decorador.
+
+#### Exemplo:
+```python
+@log_nivel("INFO")
+def soma(a, b):
+    return a + b
+
+soma(3, 5)
+```
+
+#### Saída esperada:
+```
+[INFO] Executando a função soma
+8
+```
+
+---
+
+Esses exercícios cobrem uma ampla gama de aplicações de decoradores e te ajudarão a se familiarizar com a criação de decoradores em Python. Eles vão treinar desde conceitos básicos, como contagem e logging, até conceitos mais avançados, como validação de argumentos e cache de resultados. 
+
+Qualquer dúvida ou se precisar de mais explicações sobre algum exercício específico, estarei à disposição para ajudar!
+
+
+Você está progredindo bem no uso de decoradores em Python, mas alguns pontos podem ser aprimorados para tornar seu código mais robusto e flexível. Abaixo estão algumas observações sobre o que você já domina e áreas que precisam de atenção, seguidas por exercícios focados nessas melhorias.
+
+### Pontos de Domínio
+
+1. **Estrutura Básica de Decoradores**:
+   - Você entende a estrutura de um decorador com uma função interna que encapsula a função decorada. Isso é ótimo, pois é a base para construir decoradores mais complexos.
+
+2. **Uso de Parâmetros em Decoradores**:
+   - Você aplicou parâmetros em decoradores (`@log_nivel("INFO")` e `@verificar_tipo(int, int)`) com sucesso, mostrando que entende a estrutura de decoradores parametrizados.
+
+3. **Utilização do `match-case`**:
+   - Você usou `match-case` dentro dos decoradores para avaliar diferentes condições de log, o que é um recurso avançado e facilita a estrutura condicional.
+
+### Pontos de Melhoria
+
+1. **Tratamento de Argumentos Variáveis (`*args` e `**kwargs`)**:
+   - Em alguns casos, ao manipular `*args` e `**kwargs`, seu código perdeu a generalidade, restringindo os decoradores a um número fixo de parâmetros ou tipos específicos.
+   - **Melhoria**: Aprimorar o uso de `*args` e `**kwargs` para criar decoradores mais flexíveis e generalizados.
+
+2. **Mensagens de Erro e Feedbacks mais Detalhados**:
+   - As mensagens de erro ainda podem ser aprimoradas, especialmente para ajudar na depuração. Detalhar o erro, mencionando o tipo ou valor exato que causou o problema, é importante.
+   - **Melhoria**: Construa mensagens mais detalhadas para facilitar o entendimento do erro.
+
+3. **Trabalho com Funções de Retorno**:
+   - Ao desenvolver decoradores como `log_nivel`, é útil tratar o retorno da função decorada e como o decorador deve se comportar em diferentes condições (por exemplo, no caso de "ERROR").
+   - **Melhoria**: Trabalhar com retornos específicos do decorador dependendo da situação ou do nível de log, para simular uma interrupção em decoradores de validação, por exemplo.
+
+4. **Uso de `wraps` do módulo `functools`**:
+   - Para preservar as informações da função original (`__name__`, `__doc__`, etc.) ao decorá-la, a função `wraps` do módulo `functools` é muito útil e uma boa prática.
+   - **Melhoria**: Aplicar `@wraps(func)` nas funções internas para manter as informações originais da função decorada.
+
+---
+
+### Exercícios para Melhorar esses Pontos
+
+Esses exercícios vão focar nos pontos mencionados acima para tornar seus decoradores mais eficientes e flexíveis.
+
+---
+
+#### Exercício 11: Decorador com `*args` e `**kwargs`
+
+Crie um decorador chamado `verificar_parametros` que valide se todos os parâmetros passados para uma função são do tipo `int` ou `float`. Esse decorador deve funcionar para qualquer função, independentemente da quantidade de parâmetros.
+
+```python
+@verificar_parametros
+def calcular_media(*numeros):
+    return sum(numeros) / len(numeros)
+
+print(calcular_media(10, 20, 30))        # Executa normalmente
+print(calcular_media(10, "vinte", 30))   # "Erro: Todos os parâmetros devem ser números"
+```
+
+---
+
+#### Exercício 12: Melhorando Feedback e Tratamento de Erros
+
+Crie um decorador `verificar_tipo` que recebe uma tupla de tipos esperados e verifica se cada argumento corresponde ao tipo esperado. Se houver uma discrepância, ele deve exibir uma mensagem detalhada mencionando o argumento problemático.
+
+```python
+@verificar_tipo((int, int, str))
+def funcao_exemplo(a, b, c):
+    return f"{a} e {b} são números, e '{c}' é uma string."
+
+print(funcao_exemplo(1, 2, "texto"))  # Executa normalmente
+print(funcao_exemplo(1, "dois", "texto"))  # "Erro: Argumento 2 é do tipo str, mas int era esperado."
+```
+
+---
+
+#### Exercício 13: Usando `wraps` em Decoradores
+
+Crie um decorador chamado `mensagem_decorador` que exibe uma mensagem antes e depois da execução da função decorada. Use `wraps` para manter as informações originais da função.
+
+```python
+from functools import wraps
+
+@mensagem_decorador
+def funcao_simples():
+    """Função exemplo para demonstrar wraps."""
+    print("Executando a função...")
+
+print(funcao_simples.__name__)  # Deve exibir "funcao_simples"
+print(funcao_simples.__doc__)   # Deve exibir "Função exemplo para demonstrar wraps."
+```
+
+---
+
+#### Exercício 14: Decorador de Controle de Retorno
+
+Crie um decorador `log_com_retorno` que recebe um nível de log como parâmetro (`INFO`, `WARNING`, `ERROR`) e, dependendo do nível, exiba uma mensagem de log e retorne `None` se o nível for `"ERROR"`.
+
+```python
+@log_com_retorno("INFO")
+def multiplicar(a, b):
+    return a * b
+
+@log_com_retorno("ERROR")
+def dividir(a, b):
+    return a / b
+
+print(multiplicar(3, 5))  # Exibe "[INFO] Executando a função multiplicar" e retorna 15
+print(dividir(3, 5))      # Exibe "[ERROR] A função dividir encontrou um problema." e retorna None
+```
+
+---
+
+#### Exercício 15: Decorador de Retentativa
+
+Crie um decorador `repetir_tentativas` que receba um número de tentativas como parâmetro. Ele deve tentar executar a função várias vezes até que ela seja bem-sucedida, e, caso todas as tentativas falhem, exiba uma mensagem de erro.
+
+```python
+import random
+
+@repetir_tentativas(3)
+def funcao_aleatoria():
+    if random.choice([True, False]):
+        print("Sucesso!")
+    else:
+        raise ValueError("Falha aleatória.")
+
+# Teste para verificar o comportamento de várias tentativas
+funcao_aleatoria()
+```
+
+Esses exercícios vão ajudar você a aprimorar o uso de decoradores, a criar validações mais flexíveis, a tratar melhor erros e exceções e a lidar com situações em que o retorno da função decorada é condicionado a um determinado nível de log ou estado.
