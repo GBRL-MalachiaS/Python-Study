@@ -1,5 +1,5 @@
 """
-🧮 Mini Calculadora Inteligente com Relatório
+Mini Calculadora Inteligente com Relatório
 
 Desenvolva um programa que:
 
@@ -26,3 +26,4 @@ Desenvolva um programa que:
 
 Esse desafio força a usar tudo da Semana 1.
 """
+
