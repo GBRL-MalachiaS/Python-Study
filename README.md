@@ -22,7 +22,6 @@ Status Semana 1: Concluida.
   - **Escopo de variáveis**
 Status Semana 2: Concluído
 
-
 #### Semana 3: Estruturas de Dados (Listas, Tuplas, Dicionários e Conjuntos)
 - **Objetivo:** Entender e utilizar as principais estruturas de dados em Python.
   - **Listas**: Criação, indexação, fatiamento, métodos comuns (`append`, `remove`, etc.)
