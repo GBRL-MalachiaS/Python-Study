@@ -9,6 +9,6 @@ try:
         print(f"o numero [{numero}] é positivo")
     else:
         print(f"o numero [{numero}] é")
-except TypeError:
-    print(f"ERRO: Valor fornecido para o numero é do tipo{type(numero)}, por favor informe um numero! ")
+except ValueError:
+    print(f"ERRO: Valor fornecido para o numero é do tipo{type(numero).__str__}, por favor informe um numero! ")
 
