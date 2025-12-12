@@ -3,14 +3,10 @@
 """
 
 def fatorial(n):
-    aux = n 
-    n -= 1
-    soma = aux * n
-    if n == 1:
-        return soma
-    
-    fatorial(n)
-    
+    fator = n
+    for num in range(n-1,0,-1):
+        fator =  fator * n
+        print(fator)
 
 numero = input("Digite um numero: ")
 
