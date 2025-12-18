@@ -5,10 +5,15 @@
 def fibonacci(n):
 
     if n == 1:
-        return
+        return n
     
     return fibonacci(n-1)
 
-numero = fibonacci(10)
+numero = 10
 
 print(numero)
+
+
+
+for n in range(numero):
+    print(n)
